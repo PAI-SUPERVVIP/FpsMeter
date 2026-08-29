@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D1117"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚙ Settings"
+            android:textSize="28sp"
+            android:textColor="#58A6FF"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Overlay Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OVERLAY"
+            android:textSize="12sp"
+            android:textColor="#8B949E"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="#1C2128"
+            android:layout_marginBottom="2dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Show background"
+                android:textSize="15sp"
+                android:textColor="#C9D1D9" />
+            <Switch
+                android:id="@+id/swBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:thumbTint="#58A6FF"
+                android:trackTint="#30363D" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="#1C2128"
+            android:layout_marginBottom="2dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Show frame time"
+                android:textSize="15sp"
+                android:textColor="#C9D1D9" />
+            <Switch
+                android:id="@+id/swFrameTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:thumbTint="#58A6FF"
+                android:trackTint="#30363D" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="#1C2128"
+            android:layout_marginBottom="24dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Keep screen on"
+                android:textSize="15sp"
+                android:textColor="#C9D1D9" />
+            <Switch
+                android:id="@+id/swKeepScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:thumbTint="#58A6FF"
+                android:trackTint="#30363D" />
+        </LinearLayout>
+
+        <!-- Color Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TEXT COLOR"
+            android:textSize="12sp"
+            android:textColor="#8B949E"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="12dp"
+            android:background="#1C2128"
+            android:layout_marginBottom="24dp">
+
+            <TextView android:id="@+id/colorGreen" android:layout_width="40dp" android:layout_height="40dp"
+                android:background="#3FB950" android:gravity="center" android:text="✓" android:textColor="#000"
+                android:textSize="18sp" android:layout_marginEnd="12dp" android:clickable="true" android:focusable="true" />
+            <TextView android:id="@+id/colorBlue" android:layout_width="40dp" android:layout_height="40dp"
+                android:background="#58A6FF" android:gravity="center" android:text="✓" android:textColor="#000"
+                android:textSize="18sp" android:layout_marginEnd="12dp" android:clickable="true" android:focusable="true" />
+            <TextView android:id="@+id/colorRed" android:layout_width="40dp" android:layout_height="40dp"
+                android:background="#F85149" android:gravity="center" android:text="✓" android:textColor="#000"
+                android:textSize="18sp" android:layout_marginEnd="12dp" android:clickable="true" android:focusable="true" />
+            <TextView android:id="@+id/colorYellow" android:layout_width="40dp" android:layout_height="40dp"
+                android:background="#D29922" android:gravity="center" android:text="✓" android:textColor="#000"
+                android:textSize="18sp" android:clickable="true" android:focusable="true" />
+        </LinearLayout>
+
+        <!-- Text Size Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TEXT SIZE"
+            android:textSize="12sp"
+            android:textColor="#8B949E"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#1C2128"
+            android:layout_marginBottom="24dp">
+            <SeekBar
+                android:id="@+id/seekTextSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progressTint="#58A6FF"
+                android:thumbTint="#58A6FF" />
+            <TextView
+                android:id="@+id/tvTextSizeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20sp"
+                android:textSize="12sp"
+                android:textColor="#8B949E"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- System Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SYSTEM"
+            android:textSize="12sp"
+            android:textColor="#8B949E"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="#1C2128"
+            android:layout_marginBottom="2dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Show in status bar"
+                android:textSize="15sp"
+                android:textColor="#C9D1D9" />
+            <Switch
+                android:id="@+id/swNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:thumbTint="#58A6FF"
+                android:trackTint="#30363D" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="#1C2128"
+            android:layout_marginBottom="32dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Show refresh rate"
+                android:textSize="15sp"
+                android:textColor="#C9D1D9" />
+            <Switch
+                android:id="@+id/swRefreshRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:thumbTint="#58A6FF"
+                android:trackTint="#30363D" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FPS Meter v1.0 · Made with Shizuku"
+            android:textSize="11sp"
+            android:textColor="#484F58"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp" />
+
+    </LinearLayout>
+</ScrollView>
